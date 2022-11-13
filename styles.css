@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Changa", sans-serif;
+  margin: 0;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+section {
+  text-align: center;
+  width: 50%;
+  height: 100vh;
+}
+
+.bg {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+#sea .bg {
+  background-image: url("./assets/images/sea.jpg");
+}
+
+#desert .bg {
+  background-image: url("./assets/images/desert.jpg");
+  position: relative;
+}
+
+#desert .bg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #ffb803c3;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+#sea .bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #219dbca8;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+h3 {
+  font-size: 5rem;
+  color: #fff;
+}
+
+button {
+  border: 5px solid #fff;
+  outline: none;
+  padding: 25px 50px;
+  background-color: transparent;
+  font-size: 2.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#desert .btn:hover {
+  border: none;
+  margin: 10px 0 0 0;
+  background-color: #ffb703;
+  transition: all 0.5s ease-in-out;
+}
+
+#sea .btn:hover {
+  border: none;
+  margin: 10px 0 0 0;
+  background-color: #219ebc;
+  transition: all 0.5s ease-in-out;
+}
+
+.bg > div {
+    z-index: 1;
+}
+
+.expend {
+    width: 95%;
+    transition: all 0.8s ease-in-out;
+}
