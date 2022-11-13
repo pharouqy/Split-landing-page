@@ -44,14 +44,14 @@ section {
 }
 
 #desert .bg::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #ffb803c3;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ffb803c3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
 #sea .bg::after {
   content: "";
@@ -93,10 +93,21 @@ button {
 }
 
 .bg > div {
-    z-index: 1;
+  z-index: 1;
 }
 
 .expend {
-    width: 95%;
-    transition: all 0.8s ease-in-out;
+  width: 95%;
+  transition: all 0.8s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1rem;
+  }
+  button {
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 1rem;
+  }
 }
